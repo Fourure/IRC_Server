@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QTcpServer>
+#include <QTcpSocket>
 #include <QMessageBox>
 
 namespace Ui {
@@ -18,11 +19,12 @@ public:
     ~Serveur();
 
 private slots:
-    void on_pushButton_clicked();
+     void sendFortune();
 
 private:
     Ui::Serveur *ui;
     QTcpServer *tcpServer;
+    QStringList fortunes;
 };
 
 #endif // SERVEUR_H
