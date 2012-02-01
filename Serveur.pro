@@ -4,15 +4,17 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network object
 
 TARGET = Serveur
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        serveur.cpp
+        serveur.cpp \
+    client.cpp
 
-HEADERS  += serveur.h
+HEADERS  += serveur.h \
+    client.h
 
 FORMS    += serveur.ui

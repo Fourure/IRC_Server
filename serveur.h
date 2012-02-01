@@ -5,6 +5,8 @@
 #include <QTcpServer>
 #include <QTcpSocket>
 #include <QMessageBox>
+#include <QList>
+#include "client.h"
 
 namespace Ui {
 class Serveur;
@@ -19,12 +21,13 @@ public:
     ~Serveur();
 
 private slots:
-     void sendFortune();
+     void connection();
+     void getMessage(QString mess);
 
 private:
     Ui::Serveur *ui;
     QTcpServer *tcpServer;
-    QStringList fortunes;
+    QList<Client *> clients;
 };
 
 #endif // SERVEUR_H
